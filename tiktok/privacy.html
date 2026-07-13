@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy | Daichido Clinic</title>
+<style>
+  :root {
+    color-scheme: light dark;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+    line-height: 1.9;
+    color: #222;
+    background: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e6e6e6; background: #1a1a1a; }
+    a { color: #7ab8ff; }
+    hr { border-color: #444; }
+  }
+  h1 {
+    font-size: 1.6em;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.4em;
+    margin-top: 0;
+  }
+  @media (prefers-color-scheme: dark) {
+    h1 { border-bottom-color: #ccc; }
+  }
+  h2 {
+    font-size: 1.2em;
+    margin-top: 2em;
+    border-left: 5px solid #555;
+    padding-left: 0.6em;
+  }
+  .updated {
+    color: #666;
+    font-size: 0.95em;
+    margin-bottom: 2em;
+  }
+  @media (prefers-color-scheme: dark) {
+    .updated { color: #aaa; }
+  }
+  ul, ol { padding-left: 1.6em; }
+  li { margin-bottom: 0.5em; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+  @media (prefers-color-scheme: dark) {
+    th, td { border-color: #555; }
+  }
+  th { background: #f2f2f2; }
+  @media (prefers-color-scheme: dark) {
+    th { background: #2a2a2a; }
+  }
+  .contact-box {
+    background: #f7f7f7;
+    border-radius: 8px;
+    padding: 1.2em 1.5em;
+    margin-top: 2em;
+  }
+  @media (prefers-color-scheme: dark) {
+    .contact-box { background: #2a2a2a; }
+  }
+  footer {
+    margin-top: 3em;
+    font-size: 0.85em;
+    color: #888;
+    border-top: 1px solid #ddd;
+    padding-top: 1em;
+  }
+  @media (prefers-color-scheme: dark) {
+    footer { color: #999; border-top-color: #444; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated: July 14, 2026</p>
+
+<p>
+Daichido Clinic (referred to herein as "the Clinic") sets forth the following Privacy Policy (the "Policy") regarding the handling of information in connection with the developer application "Daichido Clinic Poster" (the "App"), which the Clinic develops and operates.
+</p>
+
+<h2>1. Overview and Scope of the App</h2>
+<p>
+The App is an internal operational tool used solely by the Clinic to automatically post promotional videos produced by the Clinic to a single official TikTok account owned and operated by the Clinic. The App is not a service used by third-party users, and it does not collect or process information belonging to any TikTok account or user other than the Clinic's own account. This Policy applies to the information the Clinic handles in the course of developing and operating the App.
+</p>
+
+<h2>2. Information Collected</h2>
+<p>The App collects and retains the following information:</p>
+<ul>
+  <li>OAuth 2.0 access tokens and refresh tokens associated with the Clinic's official TikTok account</li>
+  <li>Creator information obtained from the TikTok Content Posting API (API responses necessary for video posting, such as posting eligibility, available privacy-level options, and the maximum allowed video duration)</li>
+  <li>Video files produced by the Clinic for posting (promotional materials owned by the Clinic)</li>
+</ul>
+<p>
+The App does not collect any personal information of third-party users, follower personal data, viewing history, comments, or any other personally identifiable information.
+</p>
+
+<h2>3. Purpose of Use</h2>
+<ul>
+  <li>To automatically post promotional videos to the Clinic's official TikTok account</li>
+  <li>To use the TikTok Content Posting API (scopes: video.publish, video.upload) to the extent necessary for posting</li>
+  <li>To use creator information in posting requests so that posting settings (such as privacy level) are correctly applied</li>
+</ul>
+<p>The information is not used for any purpose other than the above, such as advertising, profiling, or provision to third parties.</p>
+
+<h2>4. Disclosure to Third Parties</h2>
+<p>
+The Clinic does not sell, share, or provide the information it obtains (access tokens, refresh tokens, creator information, etc.) to any third party unrelated to the Clinic. The information is used only through the API infrastructure provided by TikTok, to the extent necessary for the App's posting process.
+</p>
+
+<h2>5. Data Storage</h2>
+<p>
+Access tokens and refresh tokens are stored as Encrypted Secrets in GitHub Actions, managed by the Clinic. These Secrets are decrypted only at runtime and are configured so that only authorized administrators can access them. Video files are used only temporarily for the posting process, and no unnecessary local copies are retained after posting is complete.
+</p>
+
+<h2>6. Processing via the TikTok API</h2>
+<p>
+The App uses the Content Posting API provided by TikTok for Developers to carry out the video posting process. The handling of information sent and received in this process complies with TikTok's Developer Terms of Service and Community Guidelines. The Clinic operates the App in compliance with TikTok's API terms of use.
+</p>
+
+<h2>7. Token Revocation</h2>
+<p>
+The Clinic has the right to revoke, at any time, the access tokens and refresh tokens granted to the App. Revocation may be carried out by withdrawing the app's authorization from the TikTok for Developers dashboard, or by deleting or updating the encrypted Secrets in GitHub Actions. Once revoked, the App will no longer be able to post to the associated account.
+</p>
+
+<h2>8. Data Retention Period</h2>
+<p>
+Access tokens and refresh tokens are retained as encrypted Secrets only for as long as necessary to operate the App. They will be promptly deleted upon discontinuation of operation or at the Clinic's discretion.
+</p>
+
+<h2>9. Changes to This Policy</h2>
+<p>
+The Clinic may revise the content of this Policy as necessary. Any revised content shall take effect from the time it is posted on this page.
+</p>
+
+<h2>10. Contact Us</h2>
+<div class="contact-box">
+  <p>
+    For inquiries regarding this Policy, please contact us at the address below.<br>
+    Operator: Daichido Clinic<br>
+    Contact email: <a href="mailto:daichidouchiryouin@gmail.com">daichidouchiryouin@gmail.com</a>
+  </p>
+</div>
+
+<footer>
+  &copy; Daichido Clinic
+</footer>
+
+</body>
+</html>

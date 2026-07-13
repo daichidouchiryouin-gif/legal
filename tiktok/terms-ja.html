@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>利用規約 | 大地堂治療院</title>
+<style>
+  :root {
+    color-scheme: light dark;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+    line-height: 1.9;
+    color: #222;
+    background: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e6e6e6; background: #1a1a1a; }
+    a { color: #7ab8ff; }
+    hr { border-color: #444; }
+  }
+  h1 {
+    font-size: 1.6em;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.4em;
+    margin-top: 0;
+  }
+  @media (prefers-color-scheme: dark) {
+    h1 { border-bottom-color: #ccc; }
+  }
+  h2 {
+    font-size: 1.2em;
+    margin-top: 2em;
+    border-left: 5px solid #555;
+    padding-left: 0.6em;
+  }
+  .updated {
+    color: #666;
+    font-size: 0.95em;
+    margin-bottom: 2em;
+  }
+  @media (prefers-color-scheme: dark) {
+    .updated { color: #aaa; }
+  }
+  ul, ol { padding-left: 1.6em; }
+  li { margin-bottom: 0.5em; }
+  .contact-box {
+    background: #f7f7f7;
+    border-radius: 8px;
+    padding: 1.2em 1.5em;
+    margin-top: 2em;
+  }
+  @media (prefers-color-scheme: dark) {
+    .contact-box { background: #2a2a2a; }
+  }
+  footer {
+    margin-top: 3em;
+    font-size: 0.85em;
+    color: #888;
+    border-top: 1px solid #ddd;
+    padding-top: 1em;
+  }
+  @media (prefers-color-scheme: dark) {
+    footer { color: #999; border-top-color: #444; }
+  }
+</style>
+</head>
+<body>
+
+<h1>利用規約</h1>
+<p class="updated">最終更新日: 2026年7月14日</p>
+
+<p>
+本利用規約(以下「本規約」といいます)は、大地堂治療院(以下「当院」といいます)が開発・運用する開発者アプリケーション「Daichido Clinic Poster」(以下「本アプリ」といいます)の利用条件を定めるものです。
+</p>
+
+<h2>1. 適用範囲</h2>
+<p>
+本規約は、本アプリの開発、運用、保守に関与する当院の関係者(以下「利用者」といいます)による本アプリの利用に適用されます。本アプリは当院が自院の業務のために内部利用するツールであり、一般の第三者ユーザー向けに提供されるものではありません。
+</p>
+
+<h2>2. 本アプリの目的</h2>
+<p>
+本アプリは、当院が所有・運営する公式TikTokアカウント1件に対し、当院が制作したプロモーション動画を、TikTok for Developersが提供するContent Posting API(スコープ: video.publish, video.upload)を通じて自動的に投稿することを目的とします。本アプリは当該アカウント以外への投稿、または第三者アカウントの操作を目的としません。
+</p>
+
+<h2>3. アカウント認可とトークンの管理</h2>
+<ul>
+  <li>本アプリは、OAuth 2.0による認可を通じて当院の公式TikTokアカウントのアクセストークン・リフレッシュトークンを取得します。</li>
+  <li>取得したトークンは、GitHub Actions上の暗号化Secretsに保管し、権限のある管理者以外がアクセスできないよう管理します。</li>
+  <li>当院は、必要と判断した場合、いつでもトークンの失効(revoke)を行うことができます。</li>
+</ul>
+
+<h2>4. 禁止事項</h2>
+<p>利用者は、本アプリの利用にあたり、以下の行為を行ってはなりません。</p>
+<ul>
+  <li>当院の公式TikTokアカウント以外のアカウントに対して本アプリを不正に利用する行為</li>
+  <li>TikTokのDeveloper Terms of Service、Community Guidelinesその他TikTokが定める規約・ポリシーに違反する行為</li>
+  <li>取得したアクセストークン・リフレッシュトークンを、本アプリの投稿処理以外の目的に流用する行為</li>
+  <li>取得したトークンや認証情報を第三者に開示・譲渡・共有する行為</li>
+  <li>法令、公序良俗に違反する動画または内容を投稿する行為</li>
+  <li>本アプリのソースコード、認証情報、暗号化Secretsに対する不正アクセスまたは改ざんを行う行為</li>
+  <li>虚偽の情報、誇大な効能・効果を標榜する内容を投稿する行為</li>
+</ul>
+
+<h2>5. TikTok規約への準拠</h2>
+<p>
+本アプリを通じたTikTok Content Posting APIの利用は、TikTokのDeveloper Terms of ServiceおよびCommunity Guidelinesに準拠するものとします。当院は、これらの規約に変更があった場合、本アプリの運用方法を必要に応じて見直します。
+</p>
+
+<h2>6. 投稿内容についての責任</h2>
+<p>
+本アプリを通じて投稿される動画の内容については、当院が自らの責任において制作・管理するものとし、投稿内容に法令上または医療広告上の問題(誇大な効能効果の標榜等)が含まれないよう十分に配慮します。
+</p>
+
+<h2>7. 免責事項</h2>
+<ul>
+  <li>当院は、本アプリの利用によって生じたいかなる損害についても、当院の故意または重過失による場合を除き、責任を負わないものとします。</li>
+  <li>TikTok APIの仕様変更、障害、サービス停止その他TikTok側の事情により本アプリが正常に動作しない場合であっても、当院は責任を負いません。</li>
+  <li>本アプリは現状有姿(as is)で提供され、特定目的への適合性、完全性、継続的な稼働を保証するものではありません。</li>
+</ul>
+
+<h2>8. 本規約の変更</h2>
+<p>
+当院は、必要に応じて本規約の内容を変更することがあります。変更後の内容は、本ページに掲載した時点から効力を生じるものとします。
+</p>
+
+<h2>9. 準拠法・管轄</h2>
+<p>
+本規約の解釈および適用は、日本法に準拠するものとします。本アプリに関して当院との間で紛争が生じた場合には、当院所在地を管轄する裁判所を第一審の専属的合意管轄裁判所とします。
+</p>
+
+<h2>10. お問い合わせ</h2>
+<div class="contact-box">
+  <p>
+    本規約に関するお問い合わせは、以下の連絡先までご連絡ください。<br>
+    事業者名: 大地堂治療院<br>
+    連絡先メールアドレス: <a href="mailto:daichidouchiryouin@gmail.com">daichidouchiryouin@gmail.com</a>
+  </p>
+</div>
+
+<footer>
+  &copy; 大地堂治療院
+</footer>
+
+</body>
+</html>
