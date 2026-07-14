@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<title>TikTok OAuth Callback - 大地堂治療院</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", sans-serif;
+    background: #111;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+  h1 { font-size: 18px; margin-bottom: 8px; }
+  .note {
+    color: #f5a623;
+    font-size: 14px;
+    margin-bottom: 24px;
+    max-width: 480px;
+    text-align: center;
+    line-height: 1.6;
+  }
+  .code-box {
+    background: #222;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 16px 20px;
+    font-size: 20px;
+    word-break: break-all;
+    max-width: 640px;
+    user-select: all;
+    margin-bottom: 16px;
+  }
+  .empty { color: #888; font-size: 14px; }
+  button {
+    background: #eee;
+    color: #111;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  button:active { opacity: 0.7; }
+</style>
+</head>
+<body>
+  <h1>TikTok認可コード（code）</h1>
+  <p class="note">
+    この値を絶対にClaude（AI）や第三者に貼り付けないでください。<br>
+    ローカルで <code>tools/exchange_token.py</code> にこの値を渡して、
+    refresh_tokenへの交換に使ってください。
+  </p>
+  <div id="codeBox" class="code-box empty">codeが見つかりません（URLに ?code=... が付いていません）</div>
+  <button id="copyBtn" style="display:none;" onclick="copyCode()">コピー</button>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var code = params.get("code");
+      var box = document.getElementById("codeBox");
+      var btn = document.getElementById("copyBtn");
+      if (code) {
+        box.textContent = code;
+        box.classList.remove("empty");
+        btn.style.display = "inline-block";
+      }
+    })();
+
+    function copyCode() {
+      var box = document.getElementById("codeBox");
+      navigator.clipboard.writeText(box.textContent).then(function () {
+        var btn = document.getElementById("copyBtn");
+        var original = btn.textContent;
+        btn.textContent = "コピーしました";
+        setTimeout(function () { btn.textContent = original; }, 1500);
+      });
+    }
+  </script>
+</body>
+</html>
